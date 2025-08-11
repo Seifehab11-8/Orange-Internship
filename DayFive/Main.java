@@ -31,8 +31,8 @@ public class Main {
         ArrayList<ArrayList<Integer>> matA = new ArrayList<>(), matB = new ArrayList<>(), matC = new ArrayList<>();
         ExecutorService executorService = Executors.newFixedThreadPool(20);
         try {
-            readFile("/Users/seifehab/Desktop/txtFiles/txt1.txt", matA);
-            readFile("/Users/seifehab/Desktop/txtFiles/txt2.txt", matB);
+            readFile("txt1.txt", matA);
+            readFile("txt2.txt", matB);
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         }
