@@ -14,7 +14,7 @@ public class Task implements Runnable{
         synchronized (this){
             this.allNames = allNames;
             fileNum++;
-            path = String.format("/Users/seifehab/Desktop/txtFiles/txt%d.txt", fileNum);
+            path = String.format("txt%d.txt", fileNum);
         }
 
     }
