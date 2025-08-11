@@ -1,4 +1,4 @@
-package dayTwo;
+package DayTwo;
 
 import java.util.Scanner;
 
@@ -28,5 +28,6 @@ public class pb6 {
             }
         }
         System.out.println(numOfSessions);
+        scanner.close();
     }
 }

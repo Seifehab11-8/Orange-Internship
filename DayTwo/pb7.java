@@ -1,7 +1,4 @@
-package dayTwo;
-
-import java.util.Arrays;
-import java.util.Scanner;
+package DayTwo;
 
 import java.util.Scanner;
 
@@ -13,14 +10,17 @@ public class pb7 {
         if (n == 1 || n == 2) {
             System.out.println(1);
             System.out.println(1);
+            scanner.close();
             return;
         } else if (n == 4) {
             System.out.println(4);
             System.out.println(3 + " " + 1 + " " + 4 + " " + 2);
+            scanner.close();
             return;
         } else if (n == 3) {
             System.out.println(2);
             System.out.println(1 + " " + 3);
+            scanner.close();
             return;
         }
         int[] arr = new int[n];
@@ -40,5 +40,6 @@ public class pb7 {
         for (int i = 0; i < n; i++) {
             System.out.print(arr[i] + " ");
         }
+        scanner.close();
     }
 }

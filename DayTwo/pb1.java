@@ -1,4 +1,4 @@
-package dayTwo;
+package DayTwo;
 
 import java.util.Scanner;
 
@@ -12,6 +12,7 @@ public class pb1 {
         int intialUpdateIndex = 0;
         if(k == 1) {
             System.out.println(d);
+            scanner.close();
             return;
         }
         StringBuilder n = new StringBuilder('1' +

@@ -1,4 +1,4 @@
-package dayTwo;
+package DayTwo;
 
 import java.util.Scanner;
 
@@ -13,6 +13,7 @@ public class pb10 {
         }
         if(k == 0) {
             System.out.println(0);
+            scanner.close();
             return;
         }
         for(int i = 0; i < 12; i++) {

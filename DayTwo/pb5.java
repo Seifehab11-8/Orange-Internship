@@ -1,4 +1,4 @@
-package dayTwo;
+package DayTwo;
 import java.util.Scanner;
 public class pb5 {
     public static void main(String[] args) {
@@ -15,5 +15,6 @@ public class pb5 {
         }
 
         System.out.println(max1+max2);
+        scanner.close();
     }
 }
