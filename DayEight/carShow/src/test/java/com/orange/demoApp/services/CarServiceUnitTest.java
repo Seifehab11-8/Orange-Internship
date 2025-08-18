@@ -11,12 +11,13 @@ import org.mockito.Mock;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.mockito.ArgumentMatchers.*;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(SpringExtension.class)
 public class CarServiceUnitTest {
-    @Mock
+ @Mock
     ObjectMapper objectMapper;
     @InjectMocks
     CarService carService;
@@ -25,10 +26,13 @@ public class CarServiceUnitTest {
     @SneakyThrows
     void when_GetCars_ThenSuccess() {
         //when
-        when(objectMapper.readValue(anyString(), eq(CarDto[].class)))
-                .thenReturn(new CarDto[]{});
+
+//        when(objectMapper.readValue(anyString(), ArgumentMatchers.<TypeReference<List<CarDto>>>any()))
+//                .thenReturn(List.of());
+        // has no use since we populate the list based on init function
+        carService.carDtoListInit();
         var response = carService.getCarDtoList();
         //then
-        assertEquals(0, response.size());
+        assertNotEquals(0, response.size());
     }
 }
